@@ -16,7 +16,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh; 
-    background-image: url("/public/img/fondo\ @10x.png");
+    background-image: url('/img/fondo_2.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
