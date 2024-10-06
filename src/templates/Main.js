@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Mision01 from '../component/mision01/Mision01';
+import Mision01 from '../component/Mision01';
 
 
 const ilus1 = `${process.env.PUBLIC_URL}/img/i1.svg`
