@@ -16,7 +16,7 @@ body, html {
     justify-content: center;
     align-items: center;
     height: 100vh; 
-    background-image: url('/img/fondo_2.jpg');
+    background-image: url('/img/fondo_1.svg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
@@ -106,3 +106,118 @@ button:hover {
     background-color: #45a048;
 }
 
+.text-white {
+    color: white;
+}
+
+.container-01 {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: flex-start; /* Alinea los elementos al inicio */
+    height: 100vh; /* Altura del contenedor */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye padding en el cálculo de la altura */
+}
+
+.left-element {
+    background-color: #4CAF50; /* Color de fondo para visualizar */
+    padding: 20px;
+    width: 30%; /* Ancho del elemento izquierdo */
+    color: white;
+    animation: fadeIn 0.5s forwards; 
+    
+}
+
+
+.right-container {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en columna */
+}
+
+.right-element {
+    background-color: #2196F3; /* Color de fondo para visualizar */
+    padding: 20px;
+    margin-top: 10px; /* Espaciado entre los elementos derechos */
+    color: white;
+    opacity: 0; /* Inicia como invisible */
+    animation: fadeIn 0.5s forwards; /* Aplica la animación */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza completamente invisible */
+    }
+    to {
+        opacity: 1; /* Termina completamente visible */
+    }
+}
+
+.menu-container {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1px 2px;
+    position: relative;
+}
+
+.logo {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    margin-right: auto; /* Empuja el botón a la derecha */
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px; /* Tamaño del icono */
+    cursor: pointer;
+    padding: 5px 10px; /* Padding para hacerlo más pequeño */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: background 0.3s; /* Transición al pasar el ratón */
+    display: flex; /* Para centrar el contenido */
+    align-items: center; /* Alinea el icono dentro del botón */
+    justify-content: center; /* Centra el icono horizontalmente */
+    margin: 0;
+}
+
+.menu-options {
+    position: absolute;
+    top: 50px; /* Alinea el menú debajo del botón */
+    right: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asegura que el menú esté encima */
+}
+
+.hamburger:hover {
+    background-color: rgba(150, 255, 168, 0.2); /* Efecto hover */
+}
+.menu-option {
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.menu-option:hover {
+    background-color: #afff96; /* Color al pasar el ratón */
+}
+
+.sub-menu {
+    background-color: #ffffff; /* Fondo del submenú */
+    border-radius: 5px;
+    padding: 5px 0; /* Espaciado vertical */
+}
+
+.sub-menu-option {
+    padding: 10px 20px; /* Espaciado de las opciones del submenú */
+    color:  rgb(0, 0, 0);;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sub-menu-option:hover {
+    background-color:#9aff7c; /* Color al pasar el ratón en submenú */
+}
