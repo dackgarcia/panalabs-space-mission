@@ -2,14 +2,17 @@ import React, { useState } from 'react';
 
 const HamburgerMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+    //const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
+    const [activeSubMenu, setActiveSubMenu] = useState(null); // Maneja el submenú activo
+
     const logo = `${process.env.PUBLIC_URL}/img/logo.svg`
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
-    const toggleSubMenu = () => {
-        setIsSubMenuOpen(!isSubMenuOpen);
+    const toggleSubMenu = (index) => {
+        // Si el submenú clickeado es el mismo que el activo, ciérralo; de lo contrario, ábrelo
+        setActiveSubMenu(activeSubMenu === index ? null : index);
     };
 
     return (
@@ -22,14 +25,27 @@ const HamburgerMenu = () => {
             </button>
             {isOpen && (
                 <div className="menu-options">
-                    <div className="menu-option" onClick={toggleSubMenu}>My Log</div>
-                    {isSubMenuOpen && (
+                    <div className="menu-option" onClick={() => toggleSubMenu(0)}>My Log</div>
+                    {activeSubMenu === 0 && (
                         <div className="sub-menu">
                             <div className="sub-menu-option"> - Notes</div>
                             <div className="sub-menu-option"> - Data collected</div>
                         </div>
                     )}
-                    <div className="menu-option">Missions</div>
+                    <div className="menu-option" onClick={() => toggleSubMenu(1)}>Missions</div>
+                    {activeSubMenu === 1 && (
+                        <div className="sub-menu">
+                            <div className="sub-menu-option"> - Mision 01</div>
+                            <div className="sub-menu-option"> - Mision 02</div>
+                            <div className="sub-menu-option"> - Mision 03</div>
+                            <div className="sub-menu-option"> - Mision 04</div>
+                            <div className="sub-menu-option"> - Mision 05</div>
+                            <div className="sub-menu-option"> - Mision 06</div>
+                            <div className="sub-menu-option"> - Mision 07</div>
+                            <div className="sub-menu-option"> - Mision 08</div>
+                            <div className="sub-menu-option"> - Mision 09</div>
+                        </div>
+                    )}
                     <div className="menu-option">Learn More</div>
                 </div>
             )}
