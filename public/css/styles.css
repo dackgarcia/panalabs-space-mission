@@ -19,7 +19,17 @@ body, html {
     background-image: url('/img/fondo_2.jpg');
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
+    animation: movimientoFondo 35s infinite alternate;
+}
+
+@keyframes movimientoFondo {
+    0% {
+        background-position: center top;
+    }
+    100% {
+        background-position: center bottom;
+    }
 }
 
 /* Contenedor de la imagen del astronauta y el texto de bienvenida */
@@ -36,6 +46,19 @@ body, html {
 .astronauta img {
     max-width: 100%; 
     height: auto;
+    animation: flotacion 3s ease-in-out infinite;
+}
+
+@keyframes flotacion {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* Título principal */
@@ -64,6 +87,18 @@ button {
     cursor: pointer;
     border-radius: 5px; 
     transition: background-color 0.3s ease;
+    animation: latido 1.5s ease-in-out infinite;
+}
+@keyframes latido {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Efecto hover para el botón */
