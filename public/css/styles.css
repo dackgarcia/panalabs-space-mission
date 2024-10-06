@@ -1,0 +1,73 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    background-image: url("/public/img/fondo\ @10x.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+/* Contenedor de la imagen del astronauta y el texto de bienvenida */
+.container_imagen {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white; 
+    max-width: 400px; 
+}
+
+/* Estilos de la imagen del astronauta */
+.astronauta img {
+    max-width: 100%; 
+    height: auto;
+}
+
+/* Título principal */
+.container_welcome h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.container_welcome h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Botón */
+button {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px; 
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón */
+button:hover {
+    background-color: #45a048;
+}
+
