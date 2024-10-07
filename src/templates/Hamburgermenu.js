@@ -38,12 +38,6 @@ const HamburgerMenu = () => {
                             <div className="sub-menu-option"> - Mision 01</div>
                             <div className="sub-menu-option"> - Mision 02</div>
                             <div className="sub-menu-option"> - Mision 03</div>
-                            <div className="sub-menu-option"> - Mision 04</div>
-                            <div className="sub-menu-option"> - Mision 05</div>
-                            <div className="sub-menu-option"> - Mision 06</div>
-                            <div className="sub-menu-option"> - Mision 07</div>
-                            <div className="sub-menu-option"> - Mision 08</div>
-                            <div className="sub-menu-option"> - Mision 09</div>
                         </div>
                     )}
                     <div className="menu-option">Learn More</div>

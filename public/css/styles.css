@@ -60,22 +60,40 @@ body, html {
         transform: translateY(0);
     }
 }
+@font-face {
+    font-family: 'Conthrax Sb';
+    src: url('../fonts/conthrax-sb.otf') format('truetype');
+  }
 
 /* Título principal */
 .container_welcome h1 {
     font-size: 3em;
     margin-bottom: 10px;
+    font-family: 'Conthrax Sb', sans-serif;
 }
 
 /* Subtítulo */
 .container_welcome h2 {
+    color:#ffffff;
     font-size: 1.5em;
     margin-bottom: 20px;
+    font-family: 'Conthrax Sb', sans-serif;
 }
 
+.container_welcome {
+    text-align: center;
+  }
+
+  .container_welcome p{
+    text-align: center;
+    color:#ffffff;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: 'Conthrax Sb', sans-serif;
+  }
 /* Botón */
 button {
-    background-color: #4CAF50; 
+    background-color: #4f19a0; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -88,7 +106,14 @@ button {
     border-radius: 5px; 
     transition: background-color 0.3s ease;
     animation: latido 1.5s ease-in-out infinite;
+    font-family: 'Conthrax Sb', sans-serif;
 }
+.transparent-input {
+    background-color: transparent;
+    border: 1px solid #ffffff; 
+  color: white; 
+  font-size: 18px;
+  }
 @keyframes latido {
     0% {
         transform: scale(1);
@@ -179,6 +204,7 @@ button:hover {
     align-items: center; /* Alinea el icono dentro del botón */
     justify-content: center; /* Centra el icono horizontalmente */
     margin: 0;
+    font-family: 'Conthrax Sb', sans-serif;
 }
 
 .menu-options {
@@ -189,6 +215,7 @@ button:hover {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000; /* Asegura que el menú esté encima */
+    font-family: 'Conthrax Sb', sans-serif;
 }
 
 .hamburger:hover {

@@ -1,40 +1,55 @@
-// Mision01.js
-import React from 'react';
-
-const ilus3 = `${process.env.PUBLIC_URL}/img/i3.svg`
+import React, { useState } from 'react';
+import Mision02 from '../component/Mision02';
 
 const Mision01 = () => {
   const backgroundStyle = {
-    //backgroundImage: `url(${process.env.PUBLIC_URL}/img/fondo_2.svg) !important`,
-    backgroundSize: 'cover', // O 'contain', según tus necesidades
-    height: '100vh', // Asegúrate de que tenga altura para ver el fondo
+    backgroundImage: `url(${process.env.PUBLIC_URL}/img/fondo_2.svg)`,
+    backgroundSize: 'cover',
+    height: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundRepeat: 'no-repeat',
-    animation: 'movimientoFondo 35s infinite alternate'
+    animation: 'movimientoFondo 35s infinite alternate',
+  };
 
-};
+  const [showMision, setShowMision] = useState(false);
+  const [name, setName] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleButtonClick = () => {
+    if (name.trim() === '') {
+      setErrorMessage('Please enter your name.');
+    } else {
+      setShowMision(true);
+      setErrorMessage(''); // Clear the error message
+    }
+  };
+
+  const handleChange = (event) => {
+    setName(event.target.value);
+    setErrorMessage(''); // Clear the error message if the user types something
+  };
+
   return (
-  <div className="" style={backgroundStyle}>
-    <div className="container-01">
-          <figure className="astronauta left-element">
-              <img src={ilus3} alt="astronauta" width="200" />
-          </figure>
-          <div className='right-container'>
-            <div className='right-element'>
-              <h1 className='text-white'>Mision 01: </h1>
-              <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit  </p>
-            </div>
-            <div className='right-element'>
-              <p className='text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit  </p>
-            </div>            
-            <div>
-            </div>
-
+    <div style={backgroundStyle}>
+      {showMision ? (
+        <Mision02 name={name} /> // Pass the name to Mision02
+      ) : (
+        <div className="container_welcome">
+          <h2>What's your name?</h2>
+          <input
+            className="transparent-input"
+            type="text"
+            value={name}
+            onChange={handleChange}
+          />
+          {errorMessage && <p className="error-message">{errorMessage}</p>}
+          <br />
+          <button type="button" onClick={handleButtonClick}>Next</button>
         </div>
+      )}
     </div>
-  </div>
   );
 };
 
